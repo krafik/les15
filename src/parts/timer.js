@@ -1,13 +1,15 @@
 'use strict';
-function timer(){
-  let deadLine = '2018-12-12';
+
+function timer() {
+  // let deadLine = '2018-12-12';
+  let deadLine = "December 11 2018 00:00:00 GMT+0300";
 
   function getTimeRemeining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date()), //разница между датами. кол-во миллисекун,
       s = Math.floor((t / 1000) % 60).toString(),
       m = Math.floor((t / 1000 / 60) % 60).toString(),
-      // h = Math.floor((t / (1000 * 60 * 60)));
-      h = Math.floor((t / 1000 / 60 / 60) % 24).toString();
+      h = Math.floor((t / (1000 * 60 * 60)));
+      // h = Math.floor((t / 1000 / 60 / 60) % 24).toString();
     // d = Math.floor(t / (1000 * 60 * 60 * 24));
 
     return {
