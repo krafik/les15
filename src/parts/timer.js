@@ -1,6 +1,6 @@
 'use strict';
 function timer(){
-  let deadLine = '2018-12-02';
+  let deadLine = '2018-12-12';
 
   function getTimeRemeining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date()), //разница между датами. кол-во миллисекун,

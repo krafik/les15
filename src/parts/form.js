@@ -12,7 +12,8 @@ function form() {
     input = form.getElementsByTagName('input'),
     statusMessege = document.createElement('div'),
     inputFormB = formF.getElementsByTagName('input');
-  statusMessege.classList.add('status');
+    statusMessege.classList.add('status');
+    
 
   input[0].addEventListener('keypress', (e) => {
     if (!/\d/.test(e.key) && !/\+/.test(e.key)) {
@@ -29,7 +30,7 @@ function form() {
     a.addEventListener('submit', function (event) {
       event.preventDefault();
       a.appendChild(statusMessege);
-      let formData = new FormData(form);
+      let formData = new FormData(a);
 
       function postData(data) {
         return new Promise(function (resolve, reject) {
