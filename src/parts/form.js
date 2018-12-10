@@ -58,7 +58,12 @@ function form() {
         for (let i = 0; i < input.length; i++) {
           input[i].value = '';
         }
+        setTimeout(function(){
+          statusMessege.innerHTML = '';
+        }, 2000);
       }
+      
+
       postData(formData)
         .then(() => statusMessege.innerHTML = message.loadding)
         .then(() => statusMessege.innerHTML = message.soccess)
